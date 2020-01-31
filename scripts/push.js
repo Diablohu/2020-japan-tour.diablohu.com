@@ -14,7 +14,7 @@ const spawn = require('./libs/spawn');
 const { dist: pathnameDist } = require('../koot.config');
 
 const repo = 'git@github.com:Diablohu/2020-japan-tour.diablohu.com.git';
-const branchDist = 'dist';
+const branchDist = 'gh-pages';
 
 // ============================================================================
 (async () => {
