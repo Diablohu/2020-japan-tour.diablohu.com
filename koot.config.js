@@ -57,6 +57,10 @@ module.exports = {
 
     staticCopyFrom: path.resolve(__dirname, './src/assets/public'),
 
+    serviceWorker: {
+        importsDirectory: 'workbox-assets'
+    },
+
     // 更多选项请查阅文档...
 
     /**************************************************************************
