@@ -5,11 +5,13 @@ const md5 = require('md5');
 
 const dirOrig = path.resolve(__dirname, '../../src/assets/photos');
 const dirSaveTo = path.resolve(__dirname, '../../.data/photos');
+const dirDataTo = path.resolve(__dirname, '../../data/photos');
 
 // ============================================================================
 
 (async () => {
     await fs.ensureDir(dirSaveTo);
+    await fs.ensureDir(dirDataTo);
     await fs.emptyDir(dirSaveTo);
 
     const allPhotos = [];
@@ -24,7 +26,7 @@ const dirSaveTo = path.resolve(__dirname, '../../.data/photos');
 
     // 保存至文件
     await fs.writeFile(
-        path.resolve(dirSaveTo, 'index.js'),
+        path.resolve(dirDataTo, 'index.js'),
         `export default ${JSON.stringify(allPhotos, undefined, 4).replace(
             /"require\(\*\*\*\*(.+?)\*\*\*\*\)"/g,
             `require("$1")`
