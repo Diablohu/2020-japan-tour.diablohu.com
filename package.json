@@ -25,6 +25,7 @@
         "dev:no-open": "koot-dev --no-open",
         "dev:spa": "koot-dev --type spa",
         "analyze": "koot-analyze",
+        "push": "node ./scripts/push.js",
         "eslint": "eslint \"src/**/*.+(js|jsx)\"",
         "check-types": "tsc --noEmit",
         "up": "yarn upgrade-interactive --latest"
