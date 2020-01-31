@@ -35,7 +35,9 @@
             "~Assets/*": ["./src/assets/*"],
             "~/*": ["./src/*"],
             "@types": ["./types"],
-            "@types/*": ["./types/*"]
+            "@types/*": ["./types/*"],
+            "@data": ["./data"],
+            "@data/*": ["./data/*"]
         }
     },
     "include": ["src", "types/**/*.ts"]

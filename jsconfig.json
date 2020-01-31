@@ -27,7 +27,9 @@
             "~Assets/*": ["./src/assets/*"],
             "~/*": ["./src/*"],
             "@types": ["./types"],
-            "@types/*": ["./types/*"]
+            "@types/*": ["./types/*"],
+            "@data": ["./data"],
+            "@data/*": ["./data/*"]
         }
     },
     "exclude": [".*", "dist", "dist*", "node_modules"]

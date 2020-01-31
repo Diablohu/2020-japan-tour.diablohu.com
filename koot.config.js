@@ -42,7 +42,8 @@ module.exports = {
         '@store': path.resolve('./src/store'),
         '@views': path.resolve('./src/views'),
         '~vars.less': path.resolve('./src/constants/less/_all.less'),
-        '@types': path.resolve('./types')
+        '@types': path.resolve('./types'),
+        '@data': path.resolve('./data')
     },
 
     defines: {
@@ -127,6 +128,7 @@ module.exports = {
             ]
         }
     }),
+    webpackBefore: require('./scripts/koot/webpack-before'),
     // 更多选项请查阅文档...
 
     /**************************************************************************
