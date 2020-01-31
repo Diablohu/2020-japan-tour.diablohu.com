@@ -2,6 +2,8 @@ export default [
     {
         "title": "VLog Day #1",
         "date": "2020-01-15",
+        "day": 1,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/yRRmwsP_1j0",
             "哔哩哔哩": "https://www.bilibili.com/video/av83606309/"
@@ -12,6 +14,8 @@ export default [
     {
         "title": "VLog Day #2",
         "date": "2020-01-16",
+        "day": 2,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/jQe-hEr1qxM",
             "哔哩哔哩": "https://www.bilibili.com/video/av83760965/"
@@ -22,6 +26,8 @@ export default [
     {
         "title": "VLog Day #3",
         "date": "2020-01-17",
+        "day": 3,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/OoXutwjJC6s",
             "哔哩哔哩": "https://www.bilibili.com/video/av83902658/"
@@ -32,6 +38,8 @@ export default [
     {
         "title": "VLog Day #4",
         "date": "2020-01-18",
+        "day": 4,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/V0V_jRITOQ0",
             "哔哩哔哩": "https://www.bilibili.com/video/av84039775/"
@@ -42,6 +50,8 @@ export default [
     {
         "title": "VLog Day #5",
         "date": "2020-01-19",
+        "day": 5,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/MATl9TlWgf4",
             "哔哩哔哩": "https://www.bilibili.com/video/av84185280/"
@@ -52,6 +62,8 @@ export default [
     {
         "title": "VLog Day #6",
         "date": "2020-01-20",
+        "day": 6,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/Mpv5LmsuTlc",
             "哔哩哔哩": "https://www.bilibili.com/video/av84346494/"
@@ -62,6 +74,8 @@ export default [
     {
         "title": "VLog Day #7",
         "date": "2020-01-21",
+        "day": 7,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/hHyGtEfq_fE",
             "哔哩哔哩": "https://www.bilibili.com/video/av84490365/"
@@ -72,6 +86,8 @@ export default [
     {
         "title": "VLog Day #8",
         "date": "2020-01-22",
+        "day": 8,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/zM_8dQf1FD8",
             "哔哩哔哩": "https://www.bilibili.com/video/av84620654/"
@@ -82,6 +98,8 @@ export default [
     {
         "title": "VLog Day #9",
         "date": "2020-01-23",
+        "day": 9,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/Fa5XKgpgFfs",
             "哔哩哔哩": "https://www.bilibili.com/video/av84775597/"
@@ -92,6 +110,8 @@ export default [
     {
         "title": "VLog Day #10",
         "date": "2020-01-24",
+        "day": 10,
+        "sort": 0,
         "links": {
             "YouTube": "https://youtu.be/-pgATIYx-ys",
             "哔哩哔哩": "https://www.bilibili.com/video/av84907866/"

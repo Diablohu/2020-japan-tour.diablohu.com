@@ -3,6 +3,8 @@ export interface VLog {
     thumbnail: string;
     title: string;
     date: string;
+    day: number;
+    sort: 0;
     links: {
         [site: string]: string;
     };

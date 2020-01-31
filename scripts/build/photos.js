@@ -37,7 +37,20 @@ const dirDataTo = path.resolve(__dirname, '../../data/photos');
 // ============================================================================
 
 const processPhoto = async file => {
-    const resultObj = {};
+    const matches = /^(\d+)\.(\d+)/.exec(path.basename(file));
+    const day =
+        !Array.isArray(matches) || matches.length < 3
+            ? 0
+            : parseInt(matches[1]);
+    const sort =
+        !Array.isArray(matches) || matches.length < 3
+            ? 1
+            : parseInt(matches[2]);
+
+    const resultObj = {
+        day,
+        sort
+    };
 
     const extname = path.extname(file);
     const newFile = path.resolve(dirSaveTo, `${md5(file)}${extname}`);

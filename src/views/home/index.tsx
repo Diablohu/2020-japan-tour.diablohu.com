@@ -8,7 +8,7 @@ import 'swiper/css/swiper.min.css';
 import photos from '@data/photos';
 import vlogs, { VLog } from '@data/vlogs';
 
-import Icon from '@components/icon';
+// import Icon from '@components/icon';
 
 import styles from './index.module.less';
 
@@ -26,6 +26,8 @@ interface Slide {
     type: SlideType;
     thumbnail: string;
     orig: string;
+    day: number;
+    sort: number;
     title?: string;
     date?: string;
     links?: {
@@ -43,10 +45,12 @@ const defaults: SwiperOptions = {
 };
 
 const slides: Slide[] = [
-    ...vlogs.map(({ orig, thumbnail, title, date, links }) => {
+    ...vlogs.map(({ orig, thumbnail, day, sort, title, date, links }) => {
         const vlog = {
             orig,
             thumbnail,
+            day,
+            sort,
             title,
             links,
             date,
@@ -54,11 +58,19 @@ const slides: Slide[] = [
         };
         return vlog;
     }),
-    ...photos.map(({ orig, thumbnail }) => {
-        const photo = { orig, thumbnail, type: 'photo' as SlideType };
+    ...photos.map(({ orig, thumbnail, day, sort }) => {
+        const photo = {
+            orig,
+            thumbnail,
+            day,
+            sort,
+            type: 'photo' as SlideType
+        };
         return photo;
     })
-];
+]
+    .sort((a, b) => a.sort - b.sort)
+    .sort((a, b) => a.day - b.day);
 
 // Functional Component =======================================================
 

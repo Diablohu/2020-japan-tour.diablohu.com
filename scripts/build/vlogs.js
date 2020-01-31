@@ -93,6 +93,8 @@ const processVlog = async file => {
     const resultObj = {
         title: `VLog Day #${day}`,
         date: format('yyyy-MM-dd', startDate),
+        day,
+        sort: 0,
         links: vlogs[day]
     };
 
