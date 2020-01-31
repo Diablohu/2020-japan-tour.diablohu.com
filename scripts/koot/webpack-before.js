@@ -13,6 +13,7 @@ module.exports = async ({ dist, apiServer }) => {
     const waiting = spinner(msg + '...');
 
     await spawn(`node ${path.resolve(__dirname, '../build/photos.js')}`);
+    await spawn(`node ${path.resolve(__dirname, '../build/vlogs.js')}`);
 
     waiting.stop();
     spinner(msg).succeed();

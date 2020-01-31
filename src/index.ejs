@@ -28,7 +28,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Customize -->
-    <meta name="theme-color" content="#0092f5" />
+    <meta name="theme-color" content="#01579b" />
 
     <%- inject.metas %>
     <%- inject.styles %>
@@ -39,6 +39,17 @@
     <script type="text/javascript"><%- content('critical.js') %></script>
     <%- inject.svgIconPack %>
     <%- inject.scripts %>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63308312-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63308312-3');
+    </script>
+
 </body>
 
 </html>

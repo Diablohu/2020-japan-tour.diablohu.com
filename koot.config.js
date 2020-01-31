@@ -15,7 +15,7 @@ module.exports = {
      *************************************************************************/
 
     name: '2020-japan-tour.diablohu.com',
-    type: 'react',
+    type: 'react-spa',
     dist: './dist',
 
     template: './src/index.ejs',

@@ -6,6 +6,7 @@ import Swiper, { SwiperOptions } from 'swiper';
 import 'swiper/css/swiper.min.css';
 
 import photos from '@data/photos';
+import vlogs, { VLog } from '@data/vlogs';
 
 import Icon from '@components/icon';
 
@@ -22,19 +23,39 @@ interface ComponentState {
 }
 
 interface Slide {
-    type: 'photo' | 'vlog';
+    type: SlideType;
     thumbnail: string;
-    orig?: string;
+    orig: string;
+    title?: string;
+    date?: string;
+    links?: {
+        [site: string]: string;
+    };
 }
+type SlideType = 'photo' | 'vlog';
 
 const defaults: SwiperOptions = {
     spaceBetween: 10,
-    lazy: true
+    lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 2
+    }
 };
 
 const slides: Slide[] = [
+    ...vlogs.map(({ orig, thumbnail, title, date, links }) => {
+        const vlog = {
+            orig,
+            thumbnail,
+            title,
+            links,
+            date,
+            type: 'vlog' as SlideType
+        };
+        return vlog;
+    }),
     ...photos.map(({ orig, thumbnail }) => {
-        const photo = { orig, thumbnail, type: 'photo' };
+        const photo = { orig, thumbnail, type: 'photo' as SlideType };
         return photo;
     })
 ];
@@ -83,8 +104,9 @@ class Home extends React.Component<ExtendedProps, ComponentState> {
 
         if (type === 'thumbnail') {
             Object.assign(options, {
-                slidesPerView: 'auto',
-                freeMode: true,
+                slidesPerView: 8,
+                centerInsufficientSlides: true,
+                // freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true
             });
@@ -166,9 +188,7 @@ class Home extends React.Component<ExtendedProps, ComponentState> {
                             ref={this.PrevButtonRef}
                             type="button"
                             onClick={this.buttonOnClickBlur}
-                        >
-                            <Icon className="icon" icon="arrow-left" />
-                        </button>
+                        ></button>
                         <div
                             className="swiper-pagination"
                             ref={this.PaginationRef}
@@ -178,9 +198,7 @@ class Home extends React.Component<ExtendedProps, ComponentState> {
                             ref={this.NextButtonRef}
                             type="button"
                             onClick={this.buttonOnClickBlur}
-                        >
-                            <Icon className="icon" icon="arrow-right" />
-                        </button>
+                        ></button>
                     </div>
                 </div>
                 <div
@@ -228,6 +246,33 @@ const Slide = React.memo(
                 break;
             }
             case 'vlog': {
+                const { title, date, links } = slide as VLog;
+                el = (
+                    <React.Fragment>
+                        <div className="vlog-container">
+                            <strong className="vlog-title">{title}</strong>
+                            <em className="vlog-date">{date}</em>
+                            <div className="vlog-links">
+                                {Object.entries(links).map(([site, url]) => (
+                                    <a
+                                        href={url}
+                                        key={site}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="vlog-link"
+                                    >
+                                        {site}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <img
+                            data-src={slide.orig}
+                            className="vlog swiper-lazy"
+                            alt="VLOG"
+                        />
+                    </React.Fragment>
+                );
                 break;
             }
             default: {

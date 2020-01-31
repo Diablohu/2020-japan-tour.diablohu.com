@@ -48,10 +48,7 @@ const processPhoto = async file => {
     resultObj.orig = `require(****${newFile}****)`;
 
     await sharp(file)
-        .resize(400, 400, {
-            fit: 'cover',
-            position: 'attention'
-        })
+        .resize(400)
         .jpeg({
             quality: 51
         })
