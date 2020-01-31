@@ -14,7 +14,7 @@ module.exports = async ({ dist, apiServer }) => {
         const msg = log('', `Preparing`, false);
         const waiting = spinner(msg + '...');
 
-        await fs.emptyDir(path.resolve(__dirname, 'dist/includes'));
+        await fs.emptyDir(path.resolve(__dirname, '../../dist/includes'));
 
         waiting.stop();
         spinner(msg).succeed();
