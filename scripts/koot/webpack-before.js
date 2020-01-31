@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const path = require('path');
 const spinner = require('koot/utils/spinner');
 const spawn = require('../libs/spawn');
@@ -9,14 +10,26 @@ module.exports = async ({ dist, apiServer }) => {
     // eslint-disable-next-line no-console
     console.log(' ');
 
-    const msg = log('', `Processing assets`, false);
-    const waiting = spinner(msg + '...');
+    {
+        const msg = log('', `Preparing`, false);
+        const waiting = spinner(msg + '...');
 
-    await spawn(`node ${path.resolve(__dirname, '../build/photos.js')}`);
-    await spawn(`node ${path.resolve(__dirname, '../build/vlogs.js')}`);
+        await fs.emptyDir(path.resolve(__dirname, 'dist/includes'));
 
-    waiting.stop();
-    spinner(msg).succeed();
+        waiting.stop();
+        spinner(msg).succeed();
+    }
+
+    {
+        const msg = log('', `Processing assets`, false);
+        const waiting = spinner(msg + '...');
+
+        await spawn(`node ${path.resolve(__dirname, '../build/photos.js')}`);
+        await spawn(`node ${path.resolve(__dirname, '../build/vlogs.js')}`);
+
+        waiting.stop();
+        spinner(msg).succeed();
+    }
 
     process.env.DREAMARI_DATA_PROCESSED = true;
 };
