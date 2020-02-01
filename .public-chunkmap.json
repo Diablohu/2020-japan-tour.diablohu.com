@@ -7,8 +7,8 @@
         "client": [
             "includes/chunk.a9d7a2d691540a8b1c4d.js",
             "includes/chunk.216d72cd40e7df7568e9.js",
-            "includes/extract.3.29d57788aba2d2e98111.css",
-            "includes/entry.29d57788aba2d2e98111.js"
+            "includes/extract.3.31ecc906a593d60b6b9e.css",
+            "includes/entry.31ecc906a593d60b6b9e.js"
         ],
         "__KOOT__CLIENT__RUN__FIRST__": [
             "includes/chunk.a9d7a2d691540a8b1c4d.js",
@@ -20,8 +20,8 @@
         "libs.js": "includes/chunk.a9d7a2d691540a8b1c4d.js",
         "libs-others.js": "includes/chunk.216d72cd40e7df7568e9.js",
         "__KOOT__CLIENT__RUN__FIRST__.js": "includes/entry.576370ca60f7414d1f6c.js",
-        "client.css": "includes/extract.3.29d57788aba2d2e98111.css",
-        "client.js": "includes/entry.29d57788aba2d2e98111.js",
+        "client.css": "includes/extract.3.31ecc906a593d60b6b9e.css",
+        "client.js": "includes/entry.31ecc906a593d60b6b9e.js",
         "critical.css": "includes/extract.4.28837d4430efaf8138ee.css",
         "critical.js": "includes/entry.28837d4430efaf8138ee.js",
         "__KOOT__EXTRACT__CSS__.css": "includes/extract.all.722bdbeb721236eeb7089a5e168510cd.small.css",

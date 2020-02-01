@@ -1,5 +1,5 @@
-importScripts("includes/workbox-assets/precache-manifest.23c349c40301a83844aa785768ed2721.js", "includes/workbox-assets/workbox-v4.3.1/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "includes/workbox-assets/workbox-v4.3.1"});
+importScripts("includes/__workbox-assets/precache-manifest.deeb38c53035a345999862278a7c90d2.js", "includes/__workbox-assets/workbox-v4.3.1/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "includes/__workbox-assets/workbox-v4.3.1"});
 self.__koot = {
     "distClientAssetsDirName": "includes",
     "__baseVersion_lt_0.12": false,
