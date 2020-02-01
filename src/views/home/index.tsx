@@ -1,6 +1,7 @@
 import React from 'react';
 import { extend, ExtendedProps } from 'koot';
 import classNames from 'classnames';
+// import metas from 'metas';
 
 import Swiper, { SwiperOptions } from 'swiper';
 import 'swiper/css/swiper.min.css';
@@ -75,6 +76,22 @@ const slides: Slide[] = [
 // Functional Component =======================================================
 
 @extend({
+    // pageinfo: {
+    //     title: 'Diablohu 2020 日本游',
+    //     metas: metas(
+    //         {
+    //             title: 'Diablohu 2020 日本游',
+    //             description: 'Diablohu 2020 日本游 相册 - 照片精选 & VLog',
+    //             image: slides.filter(slide => slide.type === 'photo')[0].orig,
+    //             twitter: {
+    //                 card: 'summary',
+    //                 siteCreator: 'diablohu',
+    //                 author: 'diablohu'
+    //             }
+    //         },
+    //         true
+    //     )
+    // },
     styles
 })
 class Home extends React.Component<ExtendedProps, ComponentState> {

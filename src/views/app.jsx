@@ -10,7 +10,7 @@ import styles from './app.module.less';
 const App = extend({
     pageinfo: {
         title: 'Diablohu 2020 日本游',
-        metas: [{ description: 'Diablohu 2020 日本游 相册' }]
+        metas: [{ description: 'Diablohu 2020 日本游 相册 - 照片精选 & VLog' }]
     },
     styles
 })(({ className, children, location, ...props }) => (
