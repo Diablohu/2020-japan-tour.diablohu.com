@@ -31,7 +31,7 @@
         "up": "yarn upgrade-interactive --latest"
     },
     "dependencies": {
-        "axios": "^0.19.1",
+        "axios": "^0.21.1",
         "bind-event": "^1.1.2",
         "classnames": "^2.2.6",
         "koot": "^0.12.0",
